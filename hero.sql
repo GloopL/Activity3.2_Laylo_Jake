@@ -164,3 +164,8 @@ FROM public.player
 JOIN public.hero ON player.hero_id = hero.hero_id
 WHERE hero.is_active = true;
 
+
+SELECT hero.hero_name
+FROM public.hero
+JOIN public.class ON hero.class_id = class.class_id
+WHERE class.class_name LIKE '%Archers';
